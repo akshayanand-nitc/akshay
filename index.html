@@ -28,14 +28,6 @@
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; order: -1; }
     .burger div { width: 25px; height: 3px; background: #FFD700; border-radius: 2px; }
 
-    .logo {
-        font-size: 1.6rem;
-        font-weight: 700;
-        background: linear-gradient(90deg, #FFD700, #FFB800);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
     nav { display: flex; gap: 25px; }
     nav a {
         text-decoration: none;
@@ -88,11 +80,11 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;   /* center vertically */
-        align-items: center;       /* center horizontally */
+        justify-content: center;   /* Center vertically */
+        align-items: center;       /* Center horizontally */
         text-align: center;
         overflow: hidden;
-        background: url('https://raw.githubusercontent.com/akshayanand-nitc/akshay/refs/heads/main/hero.jpg') no-repeat center top/cover;
+        background: url('images/hero.jpg') no-repeat center top/cover;
     }
 
     /* Gradient Overlay */
@@ -125,10 +117,9 @@
         max-width: 800px;
         z-index: 2;
         position: relative;
-        padding-top: 45.0vh;
     }
     .hero-text h1 {
-        font-size: 4rem; /* Larger */
+        font-size: 4rem;
         font-weight: 700;
         background: linear-gradient(90deg, #FFD700, #FFB800);
         -webkit-background-clip: text;
@@ -136,12 +127,12 @@
         text-shadow: 0 0 20px rgba(255,215,0,0.4);
     }
     .hero-text h2 {
-        font-size: 2rem; /* Larger */
+        font-size: 2rem;
         margin: 15px 0;
         color: #ddd;
     }
     .hero-text p {
-        font-size: 1.2rem; /* Larger */
+        font-size: 1.2rem;
         color: #aaa;
         margin-bottom: 30px;
         line-height: 1.8;
@@ -153,6 +144,28 @@
     .btn-outline:hover { background: #FFD700; color: #0a0a0a; box-shadow: 0 0 15px #FFD700; }
     .btn-gold { background: #FFD700; color: #0a0a0a; border: none; }
     .btn-gold:hover { box-shadow: 0 0 20px #FFD700; transform: translateY(-2px); }
+
+    /* ===== Responsive Styles ===== */
+    @media (max-width: 1024px) {
+        .hero-text h1 { font-size: 3.2rem; }
+        .hero-text h2 { font-size: 1.6rem; }
+        .hero-text p { font-size: 1.1rem; }
+    }
+
+    @media (max-width: 768px) {
+        .hero { padding: 0 6%; }
+        .hero-text h1 { font-size: 2.5rem; }
+        .hero-text h2 { font-size: 1.4rem; }
+        .hero-text p { font-size: 1rem; }
+        .spotlight { filter: blur(100px); opacity: 0.6; }
+    }
+
+    @media (max-width: 480px) {
+        .hero-text h1 { font-size: 2rem; }
+        .hero-text h2 { font-size: 1.2rem; }
+        .hero-text p { font-size: 0.95rem; line-height: 1.5; }
+        .btn { padding: 10px 20px; font-size: 1rem; }
+    }
 </style>
 </head>
 <body>
@@ -161,7 +174,6 @@
     <div class="burger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
     </div>
-    <!--div class="logo">MyPortfolio</div-->
     <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
